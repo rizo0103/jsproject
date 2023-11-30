@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="style/social-media.css">
+    <link rel="stylesheet" href="style/sidebar.css">
+    <link rel="stylesheet" href="style/carousel.css">
+    <link rel="stylesheet" href="style/anime-card.css">
+</head>
+<style>
+    body {
+        background-image: url("images/main-page/main-theme.jpg");
+    }
+    .card-group {
+        width: 1600px;
+        height: 600px;
+    }
+    .card {
+        margin: 50px;
+        border: 10px;
+    }
+    @keyframes attack {
+        to {
+            background-position-x: -112rem;
+        }
+    }
+    .sprite1 {
+        display: inline-flex;
+        width: 8rem;
+        height: 8rem;
+        background: url("images/sprites/Fire-vizard/Flame_jet.png") no-repeat;
+        animation: attack 1.5s steps(14) infinite;
+    }
+</style>
+<body>
+    <nav>
+        <a class="active index" href="">Home Page</a>
+        <a href="login.html" class="right">Login</a>
+        <a href="register.html">Register</a>
+    </nav>
+
+    <div class="sidebar">
+        <small class="sidebar-button"><img src="images/icos/category.png" title="Genres" width="30px" style="margin-top: 10px"></small>
+        <div class="text-center" >
+            <div class="categories" style="margin-bottom: 10px; position: relative">
+                <i style="color: white" class="text-hide">Genres</i>
+            </div>
+            <div class="action" title="action">
+                <a href="action.html"><img src="images/icos/action.png" width="40px" style="margin-top: 40px;"></a>
+            </div>
+            <div class="romance" title="romance">
+                <a href="romance.html"><img src="images/icos/romance.png" width="40px" style="margin-top:40px;"></a>
+            </div>
+            <div class="isekai" title="isekai">
+                <a href="isekai.html"><img src="images/icos/isekai.png" width="40px" style="margin-top:40px;"></a>
+            </div>
+            <div class="recommend" title="recommendations">
+                <a href="recommend.html"><img src="images/icos/recomendation.png" width="40px" style="margin-top:40px;"></a>
+            </div>
+            <div class="sprite1"></div>
+        </div>
+    </div>
+    <div class="slider">
+        <img src="images/slider/jujutsu-kaisen.png" alt="Изображение 1" class="slide">
+        <img src="images/slider/attack-on-titan.png" alt="Изображение 2" class="slide">
+        <img src="images/slider/naruto-shippuden-removebg-preview.png" alt="Изображение 3" class="slide">
+        <img src="images/slider/sword-art-online-removebg-preview.png" alt="Изображение 4" class="slide">
+    </div>
+    <div class="anime-card" onclick="window.location.href='animes/naruto.html'">
+        <img alt="naruto" src="images/main-page/naruto.jpg">
+        <div class="back"><h5>Naruto</h5></div>
+    </div>
+    <div class="anime-card" onclick="window.location.href='animes/attack-on-titan.html'">
+        <img alt="attack on titan" src="images/main-page/attack-on-titan.png">
+        <div class="back" style="left:100px"><h5>Attack on titan</h5></div>
+    </div>
+    <div class="anime-card" onclick="window.location.href='animes/jujutsu-kaisen.html'">
+        <img alt="jujutsu kaisen" src="images/main-page/jujutsu-kaisen.jpg">
+        <div class="back" style="left:100px"><h5>Jujutsu Kaisen</h5></div>
+    </div>
+    <div class="anime-card" onclick="window.location.href='animes/sword-art-online.html'">
+        <img alt="sword art online" src="images/main-page/sword-art-online.jpg">
+        <div class="back" style="left:80px"><h5>Sword art online</h5></div>
+    </div>
+    <div class="anime-card" onclick="window.location.href='animes/demon-slayer.html'">
+        <img alt="demon slayer" src="images/main-page/demon-slayer.png">
+        <div class="back" style="left:105px"><h5>Demon slayer</h5></div>
+    </div>
+    <div class="anime-card">
+        <img alt="akame ga kill" src="images/main-page/akame-ga-kill.jpg">
+        <div class="back" style="left:105px"><h5>Akame ga Kill</h5></div>
+    </div>
+    <div class="anime-card">
+        <img alt="one piece" src="images/main-page/one-piece.jpg">
+        <div class="back" style="left:145px"><h5>One piece</h5></div>
+    </div>
+    <div class="anime-card" onclick="window.location.href='animes/death-note.html'">
+        <img alt="death note" src="images/main-page/death-note.jpg">
+        <div class="back" style="left:135px"><h5>Death note</h5></div>
+    </div>
+    <div class="anime-card">
+        <img alt="chainsaw man" src="images/main-page/chainsaw-man.jpg">
+        <div class="back" style="left:95px"><h5>Chainsaw man</h5></div>
+    </div>
+    <div class="anime-card">
+        <img alt="tokyo revengers" src="images/main-page/tokyo-revengers.jpg">
+        <div class="back" style="left:90px"><h5>Tokyo revengers</h5></div>
+    </div>
+    <div class="social-media">
+
+    </div>
+    <script src="js/sampe.js"></script>
+    <script src="js/social-media.js"></script>
+    <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const slideInterval = 3000;
+        function changeSlide() {
+        slides[currentIndex].style.opacity = 0;
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].style.opacity = 1;
+    }
+    setInterval(changeSlide, slideInterval);
+
+    </script>
+</body>
+</html>

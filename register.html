@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/navbar.css">
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+</head>
+<style>
+    body {
+        background-image: url("images/main-page/4.jpg");
+    }
+    .card-header {
+        height: 34px;
+        margin-bottom: 10px;
+    }
+    .card-footer {
+        height: 34px;
+        font-style: italic;
+    }
+    .text-center {
+        font-style: italic;
+    }
+    .card {
+        border-radius: 20px;
+        opacity: 85%;
+        transition: 0.75s;
+    }
+    .password1 {
+        width: 230px;
+        display: inline;
+        margin-right: 20px;
+    }
+    .name {
+        width: 230px;
+        display: inline;
+        margin-right: 20px;
+    }
+    .last-name {
+        display: inline;
+        width: 243px;
+    }
+    .password2 {
+        display: inline;
+        width: 243px;
+        margin-bottom: 20px;
+    }
+    body {
+        background-size: 1600px 840px;
+    }
+    small {
+        width: 500px;
+        display: inherit;
+        text-align: right;
+    }
+</style>
+<body>
+<nav>
+    <a class="index" href="index.html">Home Page</a>
+    <a href="login.html">Login</a>
+    <a class="active" href="register.html">Register</a>
+</nav>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="text-center"> Welcome to the Register Page </h6>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder="Type your e-mail*" required /><br />
+                                <input type="text" class="form-control" id="username" placeholder="Type your username*" required /><br />
+                                <input type="password" class="form-control password1" id="password1" placeholder="Type your password*" required>
+                                <input type="password" class="form-control password2" id="password2" placeholder="Confirm your password*" required><br />
+                                <input type="text" class="form-control name" id="first name" placeholder="Type your first name" />
+                                <input type="text" class="form-control last-name" id="last name" placeholder="Type your last name" />
+                            </div>
+                        </form>
+                        <button class="btn btn-primary btn-block">Register</button>
+                    </div>
+                    <div class="card-footer">
+                        <small>Already have an account? <a href="login.html"> Log In</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    </script>
+</body>
+</html>
